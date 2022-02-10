@@ -43,7 +43,7 @@ abstract class Instructor {
             return stress;
     }
     public int respect(){
-        int respect = this.age - this.eccentricities;
+        int respect = getAge() - getEccentricities();
         if(respect < 0)
             return 0;
         else
@@ -54,16 +54,16 @@ abstract class Instructor {
         this.unreadEmail -= this.unreadEmail*readMail;
     }
 
-    public void addToEccentricities(int eccentricities){
+    public void addToEccentricities(int ecc){
         while(this.eccentricities>0)
-        this.eccentricities += eccentricities;
+        this.eccentricities += ecc;
     }
 
     public void getMail(int newMail){
         this.unreadEmail += newMail;
         Random r = new Random();
         double random = Math.random();
-        int eccRandom = r.nextInt(0)+1;
+        int eccRandom = r.nextInt(2);
         if(random < 0.2){
             if(eccRandom == 1)
                 this.eccentricities += 2;
@@ -84,7 +84,7 @@ class Grad extends Instructor{
     @Override
     public void cope() {
         Random r1 = new Random();
-        int eccRandom = r1.nextInt(0)+1;
+        int eccRandom = r1.nextInt(2);
         if(eccRandom == 1)
             addToEccentricities(3);
         else
@@ -126,4 +126,5 @@ class Faculty extends Instructor{
         return respect;
     }
 }
+
 
