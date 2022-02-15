@@ -118,6 +118,16 @@ abstract class Instructor {
         if(stress() > respect())
             cope();
     }
+    /**toString method
+     * @return String*/
+    @Override
+    public String toString(){
+        return "- Age: " + this.getAge()
+                + "\n- Unread Email: " + this.getUnreadEmail()
+                + "\n- Eccentricities: " + this.getEccentricities()
+                + "\n- Stress: " + this.stress()
+                + "\n- Respect: " + this.respect();
+    }
 }
 /**Grad inherit from Instructor*/
 class Grad extends Instructor{

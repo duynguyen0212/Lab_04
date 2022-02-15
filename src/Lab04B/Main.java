@@ -6,6 +6,7 @@
  */
 package Lab04B;
 public class Main {
+
     /**Main function
      *
      * @param args */
@@ -22,23 +23,15 @@ public class Main {
             objArray[2].getMail(mail);
         }
         System.out.println("Printing information after 10 days:");
-        System.out.println("Faculty. Age " + objArray[0].getAge());
-        System.out.println("Unread Email: " + objArray[0].getUnreadEmail());
-        System.out.println("Eccentricities: " + objArray[0].getEccentricities());
-        System.out.println("Stress: " + objArray[0].stress());
-        System.out.println("Respect: " + objArray[0].respect());
 
-        System.out.println("\nLecturer. Age " + objArray[1].getAge());
-        System.out.println("Unread Email: " + objArray[1].getUnreadEmail());
-        System.out.println("Eccentricities: " + objArray[1].getEccentricities());
-        System.out.println("Stress: " + objArray[1].stress());
-        System.out.println("Respect: " + objArray[1].respect());
+        System.out.println("Faculty:");
+        System.out.println(objArray[0].toString());
 
-        System.out.println("\nGrad. Age " + objArray[2].getAge());
-        System.out.println("Unread Email: " + objArray[2].getUnreadEmail());
-        System.out.println("Eccentricities: " + objArray[2].getEccentricities());
-        System.out.println("Stress: " + objArray[2].stress());
-        System.out.println("Respect: " + objArray[2].respect());
+        System.out.println("\nLecturer:");
+        System.out.println(objArray[1].toString());
+
+        System.out.println("\nGrad:");
+        System.out.println(objArray[2].toString());
     }
 
 }
